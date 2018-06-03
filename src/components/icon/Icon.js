@@ -9,9 +9,9 @@ const Icon =  () => {
   return (
     <div>
       <IconWrapper>
-       <img src={bulb} alt="icon-graphic" className="bulb" />    
-       <img src={computer} alt="icon-computer" className="computer" />
-       <img src={background} alt="icon-background" className="background" /> 
+       <img src={bulb} alt="icon-graphic icon" className="bulb" />    
+       <img src={computer} alt="icon-computer icon" className="computer" />
+       <img src={background} alt="icon-background icon" className="background" /> 
       </IconWrapper>
     </div>
   )
@@ -23,7 +23,7 @@ const IconWrapper = styled.div`
     padding-top: 40px;
     transition: 1s;
     &:hover {
-      transform: scale(1.02);
+      transform: scale(1.03);
     }
 `;
 export default Icon;

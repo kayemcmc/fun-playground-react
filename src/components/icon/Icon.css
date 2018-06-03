@@ -1,21 +1,23 @@
 .bulb {
     z-index: 9;
+    position: absolute;
+    width: 480px;
 
 }
 
 .computer {
     z-index: 6;
+    position: absolute;
+    width: 490px;
 }
 
 
 .background {
     z-index: 3;
+    position: absolute;
+    width: 500px;
 }
 
-img {
-    width: 500px;
-    position: absolute;
-}
 
 @media (max-width: 420px) {
     img {
