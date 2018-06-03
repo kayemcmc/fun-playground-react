@@ -3,4 +3,16 @@ body {
   padding: 0;
   font-family: Lato, sans-serif;
   background: linear-gradient(to top, #ecfbfd, #ecfbfd, #ecfbfd, #ecfbfd, #ecfbfd);
+  color: #4a4a4a;
+}
+
+.navlink {
+  color: #4a4a4a;
+  letter-spacing: 2.7px;
+}
+
+.navlink:hover {
+  color:#5762f2;
+  cursor: pointer;
+  text-decoration: none;
 }

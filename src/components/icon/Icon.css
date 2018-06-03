@@ -17,3 +17,8 @@ img {
     position: absolute;
 }
 
+@media (max-width: 420px) {
+    img {
+        width: 350px;
+    }
+}

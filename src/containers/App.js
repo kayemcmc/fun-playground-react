@@ -1,36 +1,26 @@
 import React, { Component } from 'react';
-import './App.css';
-import styled from 'styled-components';
-import Menu from '../components/menu/Menu';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from '../components/Home';
+import About from '../components/About';
+import Work from '../components/Work';
+import Contact from '../components/Contact';
+import Navbar from '../components/Navbar';
 
 class App extends Component {
   render() {
     return (
-      <div className="container">
-        <div className="pt-5 mt-5 row">
-            <div className="col-md-5 mt-5">
-               <TitleFirst>KAREN</TitleFirst>
-               <TitleLast>POSADA</TitleLast>
-            </div>
-            <div className="col-md-7">
-            <Menu />
-            </div>
+      <Router>
+        <div>
+          <Navbar />
+          <Route path='/' exact component={Home} />
+          <Route path='/about' component={About} />
+          <Route path='/work' component={Work} />
+          <Route path='/contact' component={Contact} />
         </div>
-      </div>
+      </Router>
     );
   }
 }
 
-const TitleFirst = styled.p`
-  color: #5762f2;
-  font-weight: 900;
-  font-size:8em;
-  margin-bottom: -.5em;
-`
-const TitleLast = styled.p`
-  color: #14cdec;
-  font-weight: 900;
-  font-size:7em;
-`
 
 export default App;
