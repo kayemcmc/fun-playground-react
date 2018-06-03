@@ -1,0 +1,19 @@
+.bulb {
+    z-index: 9;
+
+}
+
+.computer {
+    z-index: 6;
+}
+
+
+.background {
+    z-index: 3;
+}
+
+img {
+    width: 500px;
+    position: absolute;
+}
+
