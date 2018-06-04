@@ -14,7 +14,7 @@ class Home extends Component {
                <TitleFirst>KAREN</TitleFirst>
                <TitleLast>POSADA</TitleLast>
                <Intro>I really love to code. 
-              Especially with Javascript, it makes coding so much fun! Ready to start browsing? Click on the happy bulb <span className="mobile-hide"> &rarr;</span></Intro>
+              My favorite stack: React, Redux, Node, MongoDB. Ready to start browsing? Click on the happy bulb <span className="mobile-hide arrow"> &rarr;</span></Intro>
             </div>
             <div className="col-md-6 pt-4 mx-auto">
             <Link to="/work" className="cursor-pointer"> <Icon /></Link>

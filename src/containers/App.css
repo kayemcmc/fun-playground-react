@@ -21,6 +21,14 @@
 .App-intro {
   font-size: large;
 }
+.arrow {
+  font-size: 1.8em; 
+  color: #5762f2;
+}
+
+.arrow:hover {
+  margin-left: 20px;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
