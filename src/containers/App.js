@@ -5,6 +5,7 @@ import About from '../components/About';
 import Contact from '../components/Contact';
 import Navbar from '../components/Navbar';
 
+
 class DynamicImport extends Component {
   state = {
     component: null

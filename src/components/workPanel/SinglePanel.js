@@ -1,24 +1,31 @@
 import React from 'react';
-import Slider from './Slider';
+import Carousel from 'nuka-carousel';
+import styled from 'styled-components';
 
 const SinglePanel = (props) => {
+
+  
+  const {img1, img2, img3, title, language, url, description, styleBg} = props;
   return (
     <div className="col-md-4">
     <div className="card mb-4 box-shadow">
-      <Slider img1={props.img1} img2={props.img2} img3={props.img3}/>
-      <div className="card-body">
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <div className="d-flex justify-content-between align-items-center">
-          <div className="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-          </div>
-          <small className="text-muted">9 mins</small>
-        </div>
+    <Carousel>
+    <Image src={img1} alt="portfolio-a"/>
+    <Image src={img2} alt="portfolio-b"/>
+    <Image src={img3} alt="portfolio-c"/>
+    </Carousel>
+      <div className="card-body text-center" style={{backgroundColor: styleBg, color: '#f4f4f4'}}>
+        <h3 classNme="text-center">{title}</h3>
+        <p>{language}</p>
+        <a href={url}>View Project</a>
+        <p class="card-text">{description}</p>
       </div>
     </div>
   </div>
   )
 }
 
+const Image = styled.img`
+  width: 330px;
+`;
 export default SinglePanel;

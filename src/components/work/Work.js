@@ -1,25 +1,55 @@
 import React, { Component } from 'react';
-import SinglePanel from '../workPanel/SinglePanel'
+import { data } from '../../data';
+import './Work.css';
+import PanelList from '../workPanel/PanelList';
 
-export default class Work extends Component {
+class Work extends Component {
+  constructor() {
+    super()
+    this.state = {
+      data: data
+    }
+  }
   render() {
-    return (
-      <div className="wrapper" style={{display: 'flex'}}>
-        <nav className="sidebar" style={{minWidth: '250px', maxWidth: '250px', height: '100vh'}}>
-            <div className="sidebar-header">
-                <h3>Collapsible Sidebar</h3>
-            </div>
+    return !data.length ?
+    <h1>Loading</h1> :
+    (
+      <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar mobile-hide bg-gray">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Overview <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+          
+            </li>
+            <li class="nav-item">
+              
+            </li>
+            <li class="nav-item">
+             
+            </li>
+            <li class="nav-item">
+              
+            </li>
+          </ul>
         </nav>
-        <div className="content p-5">
-        
-            <div className="row">
-            <SinglePanel img1={`http://placehold.it/1000x400/ffffff/c0392b/&text=slide1`} img2={`http://placehold.it/1000x400/ffffff/c0392b/&text=slide2`} img3={`http://placehold.it/1000x400/ffffff/c0392b/&text=slide3`}/>
-            <SinglePanel img1={`http://placehold.it/1000x400/ffffff/c0392b/&text=slide1`} img2={`http://placehold.it/1000x400/ffffff/c0392b/&text=slide2`} img3={`http://placehold.it/1000x400/ffffff/c0392b/&text=slide3`}/>
-            <SinglePanel img1={`http://placehold.it/1000x400/ffffff/c0392b/&text=slide1`} img2={`http://placehold.it/1000x400/ffffff/c0392b/&text=slide2`} img3={`http://placehold.it/1000x400/ffffff/c0392b/&text=slide3`}/>
-            <SinglePanel img1={`http://placehold.it/1000x400/ffffff/c0392b/&text=slide1`} img2={`http://placehold.it/1000x400/ffffff/c0392b/&text=slide2`} img3={`http://placehold.it/1000x400/ffffff/c0392b/&text=slide3`}/>
-            </div>
-        </div>
+
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+        <h2>Section title</h2>
+
+          <section>
+          <PanelList data={this.state.data} />           
+          </section>
+        </main>
       </div>
+    </div>
     )
   }
 }
+
+export default Work;
