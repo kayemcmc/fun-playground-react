@@ -2,15 +2,24 @@ import React, { Component } from 'react';
 import { data } from '../../data';
 import './Work.css';
 import PanelList from '../workPanel/PanelList';
+import SearchBox from '../SearchBox';
 
 class Work extends Component {
   constructor() {
     super()
     this.state = {
-      data: data
+      data: data,
+      searchField: ''
     }
   }
+  handleSearchChange = (event) =>{
+    this.setState({searchField: event.target.value})
+  }
   render() {
+    const { data, searchField } = this.state;
+    const filteredProjects = data.filter(project => {
+      return project.language.toLowerCase().includes(searchField.toLowerCase())
+    })
     return !data.length ?
     <h1>Loading</h1> :
     (
@@ -24,8 +33,10 @@ class Work extends Component {
           </ul>
 
           <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
-          
+            <li class="nav-item text-center">
+            <SearchBox 
+            placeholder="Javascript, React..."
+            searchChange={this.handleSearchChange} />
             </li>
             <li class="nav-item">
               
@@ -43,7 +54,7 @@ class Work extends Component {
         <h2>Section title</h2>
 
           <section>
-          <PanelList data={this.state.data} />           
+          <PanelList data={filteredProjects} />           
           </section>
         </main>
       </div>

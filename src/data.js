@@ -40,7 +40,7 @@ export const data = [
         img2: 'https://res.cloudinary.com/kayemcmc/image/upload/v1528156139/aa-v2_ypv2ur.png',
         img3: 'http://res.cloudinary.com/kayemcmc/image/upload/v1528156139/aa-v1_w65xe8.png',
         title: 'Collectrium',
-        language: 'Javascript, CSS',
+        language: 'CSS, PHP',
         url: 'http://www.collectrium.com/',
         description: "Christie's collection management system for fine art and luxury collectors.",
         styleBg: '#49DF8B'
